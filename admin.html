@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="XKCD Admin Panel">
+    <title>Admin Panel - XKCD Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main">
+        <div class="container">
+            <div class="grid">
+                <div class="surface col-4-center">
+                    <div class="admin-logo-container">
+                        <a href="index.html">
+                            <img src="assets/img/logo.png" alt="XKCD Search" class="admin-logo">
+                        </a>
+                    </div>
+                    
+                    <h2 class="admin-title">DB stats</h2>
+                    
+                    <ul class="db-stats-list">
+                        <li class="db-stat-item body-base">
+                            <span class="stat-label">Comics total:</span>
+                            <span class="stat-value">3000</span>
+                        </li>
+                        <li class="db-stat-item body-base">
+                            <span class="stat-label">Comics in db:</span>
+                            <span class="stat-value">0</span>
+                        </li>
+                        <li class="db-stat-item body-base">
+                            <span class="stat-label">Update status:</span>
+                            <span class="stat-value">idle</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="admin-buttons">
+                        <button type="button" class="admin-button" id="updateButton">Update</button>
+                        <button type="button" class="admin-button" id="dropButton">Drop</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        // Buttons don't do anything yet
+        document.getElementById('updateButton').addEventListener('click', () => {
+            // Update functionality will be added later
+        });
+        
+        document.getElementById('dropButton').addEventListener('click', () => {
+            // Drop functionality will be added later
+        });
+    </script>
+</body>
+</html>
+

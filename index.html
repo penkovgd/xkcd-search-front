@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="XKCD Comic Search">
+    <title>XKCD Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="login.html" class="temp-login-link">Login</a>
+    <main class="main">
+        <div class="container">
+            <div class="grid">
+                <div class="surface col-4-center">
+                    <div class="logo-container">
+                        <a href="index.html">
+                            <img src="assets/img/logo.png" alt="XKCD Search" class="logo">
+                        </a>
+                    </div>
+                    <div class="search-tabs">
+                        <button type="button" class="search-tab active" data-search-type="default">
+                            Default search
+                        </button>
+                        <button type="button" class="search-tab" data-search-type="index">
+                            Index search
+                        </button>
+                    </div>
+                    <form class="search-form" id="searchForm">
+                        <div class="search-input-wrapper">
+                            <input 
+                                type="text" 
+                                class="search-input" 
+                                id="searchInput"
+                                placeholder="Search comics..."
+                                autocomplete="off"
+                            >
+                            <a href="search-result.html" class="search-button" aria-label="Search" style="text-decoration: none;">
+                                <span class="material-icons">search</span>
+                            </a>   
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        // Tab switching functionality
+        const tabs = document.querySelectorAll('.search-tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                tabs.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                tab.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
